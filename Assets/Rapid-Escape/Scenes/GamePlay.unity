@@ -1074,6 +1074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6436836954440749184}
   - component: {fileID: 6436836954440749185}
+  - component: {fileID: 6436836954440749186}
   m_Layer: 0
   m_Name: car
   m_TagString: Untagged
@@ -1146,6 +1147,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6436836954440749186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917709808445426234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9550977fe72841f4ea311bce90304aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontRightWheelColider: {fileID: 67202950}
+  frontLeftWheelColider: {fileID: 1166984}
+  backRightWheelColider: {fileID: 1241035581}
+  backLeftWheelColider: {fileID: 1834605185}
 --- !u!33 &6673293332189226055
 MeshFilter:
   m_ObjectHideFlags: 0
