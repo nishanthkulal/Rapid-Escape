@@ -365,7 +365,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -549,8 +549,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.26500311, y: 0.004336018, z: -0.0011918613, w: -0.96423703}
-  m_LocalPosition: {x: -0.16321528, y: 2.5287948, z: -49.39077}
+  m_LocalRotation: {x: -0.26500314, y: 0.0043360186, z: -0.0011918615, w: -0.9642371}
+  m_LocalPosition: {x: -0.15, y: 12.78, z: -51.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1163,6 +1163,11 @@ MonoBehaviour:
   frontLeftWheelColider: {fileID: 1166984}
   backRightWheelColider: {fileID: 1241035581}
   backLeftWheelColider: {fileID: 1834605185}
+  frontRightWheelTransform: {fileID: 8269348360038310970}
+  frontLeftWheelTransform: {fileID: 5422801906484249098}
+  backRightWheelTransform: {fileID: 9191411639412949509}
+  backLeftWheelTransform: {fileID: 31337270748638502}
+  speed: 500
 --- !u!33 &6673293332189226055
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1405,7 +1410,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 322464095}
   - {fileID: 6436836954440749184}
+  - {fileID: 963194228}
