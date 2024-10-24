@@ -15,11 +15,14 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform backLeftWheelTransform;
 
     [SerializeField] private float speed;
-
+    [SerializeField] private float SteeringAngle;
+    [SerializeField] private Transform carCenterofmass;
+    [SerializeField] private Rigidbody rb;
     private float verticalInput, horizontalInput;
     // Start is called before the first frame update
     void Start()
     {
+        rb.centerOfMass = carCenterofmass.localPosition;
         
     }
 
@@ -47,8 +50,8 @@ public class CarController : MonoBehaviour
     }
     private void Steering()
     {
-        frontRightWheelColider.steerAngle = 30f * horizontalInput;
-        frontLeftWheelColider.steerAngle = 30f * horizontalInput;
+        frontRightWheelColider.steerAngle = SteeringAngle * horizontalInput;
+        frontLeftWheelColider.steerAngle = SteeringAngle * horizontalInput;
     }
     private void UpdateWheel()
     {
