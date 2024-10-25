@@ -15,6 +15,7 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform backLeftWheelTransform;
 
     [SerializeField] private float speed;
+    [SerializeField] private float breakAmount;
     [SerializeField] private float SteeringAngle;
     [SerializeField] private Transform carCenterofmass;
     [SerializeField] private Rigidbody rb;
@@ -33,6 +34,7 @@ public class CarController : MonoBehaviour
         UpdateWheel();
         GetInput();
         Steering();
+        BreakSystem();
 
     }
     private void GetInput()
@@ -52,6 +54,26 @@ public class CarController : MonoBehaviour
     {
         frontRightWheelColider.steerAngle = SteeringAngle * horizontalInput;
         frontLeftWheelColider.steerAngle = SteeringAngle * horizontalInput;
+    }
+
+    private void BreakSystem()
+    {
+        if(Input.GetKey(KeyCode.Space))
+        {
+            //bug.Log("break");
+        frontRightWheelColider.brakeTorque = breakAmount;
+        frontLeftWheelColider.brakeTorque = breakAmount;
+        backRightWheelColider.brakeTorque = breakAmount;
+        backLeftWheelColider.brakeTorque = breakAmount;
+        }else
+        {
+            frontRightWheelColider.brakeTorque = 0f;
+            frontLeftWheelColider.brakeTorque = 0f;
+            backRightWheelColider.brakeTorque = 0f;
+            backLeftWheelColider.brakeTorque = 0f;
+        }
+
+
     }
     private void UpdateWheel()
     {
